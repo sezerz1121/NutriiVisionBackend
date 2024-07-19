@@ -43,7 +43,7 @@ const Scan = asyncHandler
 
         const model = await genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-        const prompt = "you Specialize in Food Recognition: identify food, provide nutritional info, and suggest recipes and provide youtube lastest videos must provide link in this way(www.youtube.com/results?search_query=addtitle)and make link clickable. format must be (This looks like food name. Nutritional Information (per serving): Recipe Suggestions: YouTube Videos: Enjoy your meal!)and give in html in <div className='Text-box'> br ui ul <a https: target=_blank>";
+        const prompt = "you Specialize in Food Recognition: identify food, provide nutritional info, and suggest recipes and provide youtube lastest videos must provide link in this way(https://www.youtube.com/results?search_query=addtitle)and make link clickable. format must be (This looks like food name. Nutritional Information (per serving): Recipe Suggestions: YouTube Videos: Enjoy your meal!)and give in html in <div className='Text-box'> br ui ul <a  target=_blank>";
 
         const imagePart = fileToGenerativePart(imageLocalPath); 
 
