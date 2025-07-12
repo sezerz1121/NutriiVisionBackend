@@ -43,7 +43,8 @@ const Scan = asyncHandler
 
         const model = await genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-        const prompt = "you Specialize in Food Recognition: identify food, provide nutritional info, and suggest recipes and provide youtube lastest videos must provide link in this way(https://www.youtube.com/results?search_query=addtitle)and make link clickable. format must be (This looks like food name. Nutritional Information (per serving): Recipe Suggestions: YouTube Videos: Enjoy your meal!)and give in html in <div className='Text-box'> br ui ul <a  target=_blank>";
+        const prompt = "You are a specialized Food Recognition AI: when given an image or text, identify the food item, provide accurate nutritional information per serving, suggest 2–3 relevant recipes, and find 2 latest YouTube videos with clickable links using this format — <div className='Text-box'><br><b>This looks like:</b> food name<br><b>Nutritional Information (per serving):</b> ...<br><b>Recipe Suggestions:</b><ul><li>Recipe 1</li><li>Recipe 2</li></ul><br><b>YouTube Videos:</b><ul><li><a target=_blank href='https://www.youtube.com/results?search_query=addtitle'>Video Title 1</a></li><li><a target=_blank href='https://www.youtube.com/results?search_query=addtitle'>Video Title 2</a></li></ul><br>Enjoy your meal!</div>
+;
 
         const imagePart = fileToGenerativePart(imageLocalPath); 
 
